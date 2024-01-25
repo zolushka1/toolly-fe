@@ -19,3 +19,12 @@ body {
 .topBarNoSelected {
     @apply transition duration-300 ease-in-out text-center pt-1 rounded-md w-full h-8 text-[#6d758f] bg-transparent hover:text-white hover:bg-[#44423e];
 }
+
+
+.sideBarSelected {
+    @apply transition duration-300 ease-in-out rounded-md w-5/6 h-12 text-white bg-[#21cda8];
+}
+
+.sideBarNoSelected {
+    @apply transition duration-300 ease-in-out rounded-md w-5/6 h-12 text-[#6d758f] bg-transparent hover:text-white hover:bg-[#44423e];
+}

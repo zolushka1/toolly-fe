@@ -1,6 +1,7 @@
 "use client"
 import { TabContext, TabPanel } from "@mui/lab";
 import { useState } from "react";
+import SideBar from "./sidebar";
 
 const MainScreen = () => {
 
@@ -14,7 +15,9 @@ const MainScreen = () => {
     return (
         <div className="flex h-screen">
             <div className="flex-col h-full w-full grid grid-cols-10">
-                <div className="col-span-2 bg-white"></div>
+                <div className="col-span-2 bg-white">
+                    <SideBar/>
+                </div>
                 <div className="col-span-8 bg-[#f4f6f8] p-5 gap-5 flex flex-col h-full">
 
                     <div className="bg-[#e9edf2] h-10 rounded-lg">
