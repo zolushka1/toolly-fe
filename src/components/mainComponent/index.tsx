@@ -1,10 +1,8 @@
 "use client"
 import { TabContext, TabPanel } from "@mui/lab";
 import { useState } from "react";
-import LoginContext from "./login";
-import RegisterContext from "./register";
 
-const LoginScreen = () => {
+const MainScreen = () => {
 
     const [tabValue, setTabValue] = useState("0");
 
@@ -16,8 +14,8 @@ const LoginScreen = () => {
     return (
         <div className="flex h-screen">
             <div className="flex-col h-full w-full grid grid-cols-10">
-                <div className="col-span-7 bg-[#323840]"></div>
-                <div className="col-span-3 bg-white p-5 gap-5 flex flex-col h-full">
+                <div className="col-span-2 bg-white"></div>
+                <div className="col-span-8 bg-[#f4f6f8] p-5 gap-5 flex flex-col h-full">
 
                     <div className="bg-[#e9edf2] h-10 rounded-lg">
                         <div className="w-full h-10 grid grid-cols-2 justify-items items-center gap-2 px-1">
@@ -31,22 +29,9 @@ const LoginScreen = () => {
                             ))}
                         </div>
                     </div>
-
-                    <div className="flex flex-col items-center justify-center h-full">
-                        <div className="w-full h-full" >
-                            <TabContext value={tabValue}>
-                                <TabPanel value={"0"} className="h-full w-full">
-                                    <LoginContext />
-                                </TabPanel>
-                                <TabPanel value={"1"} className="h-full w-full">
-                                    <RegisterContext />
-                                </TabPanel>
-                            </TabContext>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     )
 };
-export default LoginScreen;
+export default MainScreen;

@@ -2,14 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .selectedTab {
     @apply bg-white;
 }
 
 .topBarSelected {
-    @apply font-semibold transition duration-300 ease-in-out text-center pt-1 rounded-md w-full h-8 text-black bg-white;
+    @apply transition duration-300 ease-in-out text-center pt-1 rounded-md w-full h-8 text-black bg-white;
 }
 
 .topBarNoSelected {
-    @apply font-semibold transition duration-300 ease-in-out text-center pt-1 rounded-md w-full h-8 text-[#6d758f] bg-transparent hover:text-white hover:bg-[#44423e];
+    @apply transition duration-300 ease-in-out text-center pt-1 rounded-md w-full h-8 text-[#6d758f] bg-transparent hover:text-white hover:bg-[#44423e];
 }

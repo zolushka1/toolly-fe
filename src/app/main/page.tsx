@@ -1,10 +1,9 @@
+import MainScreen from "@/components/mainComponent";
 
 const MainPage = () => {
 
     return (
-        <div>
-            Main
-        </div>
+        <MainScreen />
     )
 };
 export default MainPage;
