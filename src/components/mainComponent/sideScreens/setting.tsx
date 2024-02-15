@@ -2,7 +2,7 @@ import { formatToYYYYMMDDHHMMSS } from "@/utilities/common";
 import { Button } from "@mui/material";
 import { useEffect, useState } from "react";
 
-const ItemCountSideScreen = () => {
+const SettingSideScreen = () => {
 
     const [selectedRow, setSelectedRowValue] = useState("");
     const [rowCount, setRowCount] = useState<ItemCount[]>(() => {
@@ -48,7 +48,7 @@ const ItemCountSideScreen = () => {
                     {rowCount.map((item) => (
                         <div key={item.id} className="grid grid-cols-10 h-14 p-2 bg-white rounded border">
                             <div className="col-span-1 items-center justify-start flex">
-                                <Button className="bg-[#21cda8] text-white capitalize text-sm hover:bg-[#44423e]">
+                                <Button className="bg-[#21cda8] text-white capitalize text-sm">
                                     Засах
                                 </Button>
                             </div>
@@ -62,8 +62,8 @@ const ItemCountSideScreen = () => {
                                 {item.status === 1 ? item.endDate : ""}
                             </span>
                             <div className={`col-span-1 text-sm flex items-center justify-center rounded 
-                                ${item.status === 0 ? 'bg-gray-200' : 'bg-green-200'}`}>
-                                {item.status === 0 ? 'freeze' : 'progress'}
+                                ${item.status === 0 ? 'bg-gray-200' : 'bg-blue-200'}`}>
+                                {item.status === 0 ? 'ЭХЛЭЭГҮЙ' : 'ТООЛЖЫН'}
                             </div>
                         </div>
                     ))}
@@ -74,4 +74,4 @@ const ItemCountSideScreen = () => {
     );
 };
 
-export default ItemCountSideScreen;
+export default SettingSideScreen;

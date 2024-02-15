@@ -3,7 +3,9 @@ import { TabContext, TabPanel } from "@mui/lab";
 import { Divider } from "@mui/material";
 import { useState } from "react";
 
-const SideBar = () => {
+
+
+const SideBar: React.FC<SideBarProps> = ({ onTabChange }) => {
 
     const [itemValue, setItemValue] = useState("0");
     const [tabValue, setTabValue] = useState("0");
@@ -29,11 +31,15 @@ const SideBar = () => {
                     </div>
                     <Divider className="text-[#6d758f] w-5/6" />
                     {items.map((item) => (
-                        <div key={item.index} onClick={() => setItemValue(item.index)}
-                            className={itemValue === item.index ? "sideBarSelected" : "sideBarNoSelected"}>
-                            <span className="p-2">
-                                {item.name}
-                            </span>
+                        <div
+                            key={item.index}
+                            onClick={() => {
+                                setItemValue(item.index);
+                                onTabChange(item.index);
+                            }}
+                            className={itemValue === item.index ? "sideBarSelected" : "sideBarNoSelected"}
+                        >
+                            <span className="p-2">{item.name}</span>
                         </div>
                     ))}
                 </div>

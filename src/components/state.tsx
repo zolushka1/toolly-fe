@@ -29,3 +29,7 @@ interface Item {
     cost: number;
     createdDate: string;
 }
+
+interface SideBarProps {
+    onTabChange: (newValue: string) => void;
+}

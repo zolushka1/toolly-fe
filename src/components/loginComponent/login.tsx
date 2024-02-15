@@ -10,6 +10,10 @@ const LoginContext = () => {
     const [isSaved, setIsSaveValue] = useState(false);
 
 
+    const login = () => {
+        window.history.pushState({}, "", "/main");
+    };
+
     return (
         <div className="h-full w-full">
             <div className="flex flex-col gap-3 w-5/6 items-center">
@@ -37,7 +41,10 @@ const LoginContext = () => {
                             className="col-span-5 border-b-2 w-5/6 border-[#323840] focus:border-[#323840] transition-colors"
                             variant="standard" type="password">aa</TextField>
                     </div>
-                    <Button className="bg-[#00d1a6] capitalize w-5/6 h-12 text-white rounded-lg text-lg hover:bg-[#00d1a6]">Нэвтрэх</Button>
+                    <Button
+                        className="bg-[#00d1a6] capitalize w-5/6 h-12 text-white rounded-lg text-lg hover:bg-[#00d1a6]"
+                        onClick={login}
+                    >Нэвтрэх</Button>
                 </div>
             </div>
         </div>

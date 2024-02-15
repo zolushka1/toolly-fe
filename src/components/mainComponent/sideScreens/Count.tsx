@@ -2,7 +2,7 @@ import { formatToYYYYMMDDHHMMSS } from "@/utilities/common";
 import { Button } from "@mui/material";
 import { useEffect, useState } from "react";
 
-const ItemCountSideScreen = () => {
+const CountSideScreen = () => {
 
     const [selectedRow, setSelectedRowValue] = useState("");
     const [rowCount, setRowCount] = useState<ItemCount[]>(() => {
@@ -62,7 +62,7 @@ const ItemCountSideScreen = () => {
                                 {item.status === 1 ? item.endDate : ""}
                             </span>
                             <div className={`col-span-1 text-sm flex items-center justify-center rounded 
-                                ${item.status === 0 ? 'bg-gray-200' : 'bg-green-200'}`}>
+                                ${item.status === 0 ? 'bg-gray-200' : 'bg-blue-200'}`}>
                                 {item.status === 0 ? 'freeze' : 'progress'}
                             </div>
                         </div>
@@ -74,4 +74,4 @@ const ItemCountSideScreen = () => {
     );
 };
 
-export default ItemCountSideScreen;
+export default CountSideScreen;
