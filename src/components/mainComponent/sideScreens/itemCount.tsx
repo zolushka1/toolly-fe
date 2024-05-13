@@ -26,12 +26,21 @@ const ItemCountSideScreen = () => {
     return (
         <div className="h-full w-full flex flex-col gap-3">
             <div className="grid grid-cols-10 gap-3">
-                <Button className="primaryButton col-span-2">
+                <input
+                    placeholder="Хайх"
+                />
+                <button className="primaryButton col-span-2">
                     Шинэ
-                </Button>
+                </button>
             </div>
 
-            <div className="w-full h-full">
+            <div className="grid grid-cols-3 gap-3" >
+                <div className="bg-white rounded border h-96 p-3">№ 1</div>
+                <div className="bg-white rounded border h-96 p-3">№ 2</div>
+                <div className="bg-white rounded border h-96 p-3">№ 3</div>
+            </div>
+
+            {/* <div className="w-full h-full">
                 <div className="grid grid-cols-10 bg-[#44423e] text-white h-10 rounded p-2">
                     <span className="col-span-1 text-sm items-center justify-start flex font-semibold text-left"></span>
                     <span className="col-span-1 text-sm items-center justify-start flex font-semibold text-left">#</span>
@@ -69,7 +78,7 @@ const ItemCountSideScreen = () => {
                     ))}
                 </div>
 
-            </div>
+            </div> */}
         </div>
     );
 };

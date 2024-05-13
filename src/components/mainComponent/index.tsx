@@ -38,7 +38,7 @@ const MainScreen = () => {
     return (
         <div className="flex h-screen">
             <div className="flex-col h-full w-full grid grid-cols-10">
-                <div className="col-span-2 bg-white">
+                <div className="col-span-2 bg-white border border-r">
                     <SideBar onTabChange={handleTabChange} />
                 </div>
                 <div className="col-span-8 bg-[#f4f6f8] gap-5 flex flex-col h-full">

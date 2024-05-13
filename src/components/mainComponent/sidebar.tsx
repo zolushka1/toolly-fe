@@ -37,8 +37,7 @@ const SideBar: React.FC<SideBarProps> = ({ onTabChange }) => {
                                 setItemValue(item.index);
                                 onTabChange(item.index);
                             }}
-                            className={itemValue === item.index ? "sideBarSelected" : "sideBarNoSelected"}
-                        >
+                            className={itemValue === item.index ? "sideBarSelected" : "sideBarNoSelected"}>
                             <span className="p-2">{item.name}</span>
                         </div>
                     ))}

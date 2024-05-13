@@ -30,9 +30,7 @@ const LoginScreen = () => {
     ];
 
     return (
-        <div className="flex h-screen"
-        // style={{ height: `${drawerHeight}px` }}
-        >
+        <div className="flex h-screen">
             <div className="flex-col h-full w-full grid grid-cols-10">
                 <div className="col-span-7 bg-[#323840] flex items-center justify-center">
                     <Image

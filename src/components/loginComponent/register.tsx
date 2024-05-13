@@ -17,14 +17,13 @@ const RegisterContext = () => {
                         <div className="col-span-1 flex items-center justify-center">
                             <LocalPhoneIcon className="w-6 h-6 text-[#323840]" />
                         </div>
-                        <TextField
-                            label="Утасны дугаар"
-                            className="col-span-5 border-b-2 w-5/6 border-[#00d1a6] focus:border-[#323840] transition-colors"
-                            variant="standard">aa</TextField>
+                        <input
+                            placeholder="Утасны дугаар"
+                            className="col-span-5 w-5/6 bg-[#f4f6f8] outline-none focus:border-none" />
                     </div>
-                    <Button
-                        className="bg-[#00d1a6] capitalize w-5/6 h-12 text-white rounded-lg text-lg hover:bg-[#00d1a6]"
-                    >Бүртгүүлэх</Button>
+                    <button
+                        className="bg-[#00d1a6] capitalize w-5/6 h-12 text-white rounded-lg text-lg hover:bg-[#323840] transition-all"
+                    >Бүртгүүлэх</button>
                 </div>
             </div>
         </div>

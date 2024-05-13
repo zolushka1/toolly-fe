@@ -27,24 +27,23 @@ const LoginContext = () => {
                         <div className="col-span-1 flex items-center justify-center">
                             <AccountCircleIcon className="w-6 h-6 text-[#323840]" />
                         </div>
-                        <TextField
-                            label="Утасны дугаар"
-                            className="col-span-5 border-none w-5/6 border-[#323840] focus:border-[#323840] transition-colors"
-                            variant="standard">aa</TextField>
+                        <input
+                            placeholder="Утасны дугаар"
+                            className="col-span-5 border-none w-5/6 bg-[#f4f6f8] outline-none focus:border-none" />
                     </div>
                     <div className="grid grid-cols-6 h-14 w-5/6 border-none rounded-lg bg-[#f4f6f8]">
                         <div className="col-span-1 flex items-center justify-center">
                             <HttpsIcon className="w-6 h-6 text-[#323840]" />
                         </div>
-                        <TextField
-                            label="Нууц үг"
-                            className="col-span-5 border-b-2 w-5/6 border-[#323840] focus:border-[#323840] transition-colors"
-                            variant="standard" type="password">aa</TextField>
+                        <input
+                            placeholder="Нууц үг"
+                            className="col-span-5 w-5/6 bg-[#f4f6f8] outline-none focus:border-none"
+                            type="password" />
                     </div>
-                    <Button
-                        className="bg-[#00d1a6] capitalize w-5/6 h-12 text-white rounded-lg text-lg hover:bg-[#00d1a6]"
+                    <button
+                        className="bg-[#00d1a6] capitalize w-5/6 h-12 text-white rounded-lg text-lg hover:bg-[#323840] transition-all"
                         onClick={login}
-                    >Нэвтрэх</Button>
+                    >Нэвтрэх</button>
                 </div>
             </div>
         </div>
