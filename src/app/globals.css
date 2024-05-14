@@ -30,5 +30,5 @@ body {
 }
 
 .primaryButton {
-    @apply capitalize transition duration-300 ease-in-out rounded-md w-full h-10 text-white bg-[#21cda8] hover:bg-[#44423e] ;
+    @apply capitalize transition duration-300 ease-in-out rounded-md w-full h-8 text-white bg-[#21cda8] hover:bg-[#44423e] ;
 }

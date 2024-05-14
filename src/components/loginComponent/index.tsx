@@ -1,5 +1,4 @@
 "use client"
-import { TabContext, TabPanel } from "@mui/lab";
 import { useEffect, useState } from "react";
 import LoginContext from "./login";
 import RegisterContext from "./register";

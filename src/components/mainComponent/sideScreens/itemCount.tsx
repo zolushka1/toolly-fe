@@ -1,43 +1,59 @@
-import { formatToYYYYMMDDHHMMSS } from "@/utilities/common";
-import { Button } from "@mui/material";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const ItemCountSideScreen = () => {
 
-    const [selectedRow, setSelectedRowValue] = useState("");
-    const [rowCount, setRowCount] = useState<ItemCount[]>(() => {
-        const defaultData: ItemCount[] = [];
-        for (let i = 1; i <= 30; i++) {
+    const [searchText, setSearchText] = useState("");
+    const [drawerHeight, setDrawerHeight] = useState(window.innerHeight - 40);
 
-            defaultData.push({
-                id: i,
-                name: `Бүлэг ${i}`,
-                status: Math.random() < 0.5 ? 0 : 1,
-                totalQty: 0,
-                totalSellPrice: 0,
-                totalCostPrice: 0,
-                startDate: "2024-10-15",
-                endDate: "2024-10-15",
-            });
-        }
-        return defaultData;
-    });
+    useEffect(() => {
+
+        const handleResize = () => {
+            setDrawerHeight(window.innerHeight - 100);
+        };
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     return (
         <div className="h-full w-full flex flex-col gap-3">
             <div className="grid grid-cols-10 gap-3">
-                <input
-                    placeholder="Хайх"
-                />
-                <button className="primaryButton col-span-2">
-                    Шинэ
+                <div className="col-span-3 flex items-center gap-1 bg-white h-8 w-full rounded-md border border-grayBorder">
+                    <Image
+                        src="/main/search.svg"
+                        alt="icon"
+                        width={24}
+                        height={24}
+                        className="cursor-pointer pl-2 text-[#676f7c]"
+                    />
+                    <input
+                        // ref={itemInfoRef}
+                        autoFocus={true}
+                        className="text-[#676f7c] w-4/6 text-sm h-full border-none hover:bg-transparent outline-none"
+                        placeholder="Бараа хайх, бар код уншуулах"
+                        value={searchText}
+                        onChange={(e) => setSearchText(e.target.value)}
+                    />
+                </div>
+                <button className="primaryButton col-span-1">
+                    шинэ
                 </button>
             </div>
 
-            <div className="grid grid-cols-3 gap-3" >
-                <div className="bg-white rounded border h-96 p-3">№ 1</div>
-                <div className="bg-white rounded border h-96 p-3">№ 2</div>
-                <div className="bg-white rounded border h-96 p-3">№ 3</div>
+            <div className="grid grid-cols-3 gap-3 overflow-x-auto"
+                style={{ maxHeight: `${drawerHeight}px` }}
+            >
+                <div className="bg-white rounded border h-64 p-3">№ 1</div>
+                <div className="bg-white rounded border h-64 p-3">№ 2</div>
+                <div className="bg-white rounded border h-64 p-3">№ 3</div>
+                <div className="bg-white rounded border h-64 p-3">№ 4</div>
+                <div className="bg-white rounded border h-64 p-3">№ 5</div>
+                <div className="bg-white rounded border h-64 p-3">№ 6</div>
+                <div className="bg-white rounded border h-64 p-3">№ 7</div>
+                <div className="bg-white rounded border h-64 p-3">№ 8</div>
+                <div className="bg-white rounded border h-64 p-3">№ 9</div>
             </div>
 
             {/* <div className="w-full h-full">
