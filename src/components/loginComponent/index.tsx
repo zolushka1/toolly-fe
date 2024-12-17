@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import LoginContext from "./login";
 import RegisterContext from "./register";
 import Image from "next/image";
+import { TabContext, TabPanel } from "@mui/lab";
 
 const LoginScreen = () => {
 
